@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Tante Marci Food To Go</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-circle">TM</div>
+                <span class="logo-text">Tante Marci</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-small">
+        <div class="hero-bg">
+            <img src="restaurant-hero.jpg" alt="Tante Marci Restaurant">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Contact</h1>
+            <p class="hero-subtitle">Neem contact met ons op - we helpen je graag!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <i class="fas fa-comment-dots"></i>
+                        <h2>Stuur ons een bericht</h2>
+                    </div>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Naam *</label>
+                            <input type="text" id="name" name="name" required placeholder="Jouw naam">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="jouw@email.nl">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefoon</label>
+                            <input type="tel" id="phone" name="phone" placeholder="06-12345678">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Bericht *</label>
+                            <textarea id="message" name="message" required rows="5" placeholder="Waarmee kunnen we je helpen?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Verstuur Bericht
+                        </button>
+                    </form>
+                    <div id="successMessage" class="success-message hidden">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Bedankt!</h3>
+                        <p>Je bericht is succesvol verstuurd.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <!-- Contact Cards -->
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon orange">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Adres</h4>
+                                <p>'s-Gravelandseweg 563<br>3119 XT Schiedam</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon green">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Openingstijden</h4>
+                                <p>Maandag - Zondag<br>11:00 - 21:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon blue">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Telefoon</h4>
+                                <a href="tel:+31101234567">Bel voor bestellingen</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon purple">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>E-mail</h4>
+                                <a href="mailto:info@tantemarci.nl">info@tantemarci.nl</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-card">
+                        <h3>Volg Ons</h3>
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <p>Volg ons op social media voor de laatste updates en aanbiedingen!</p>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <h3>Snelle Acties</h3>
+                        <div class="action-buttons">
+                            <a href="tel:+31101234567" class="action-btn">
+                                <div class="action-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <span>Bel Nu</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Tante+Marci+Food+To+Go,'s-Gravelandseweg+563,3119+XT+Schiedam" target="_blank" rel="noopener noreferrer" class="action-btn">
+                                <div class="action-icon orange">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span>Route Plannen</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <h2>Onze Locatie</h2>
+                <div class="map-container large">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2458.5!2d4.38!3d51.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c435c1cae2dc01%3A0x80fef12d324a6b3e!2sTante%20Marci%20Food%20To%20Go!5e0!3m2!1snl!2snl!4v1700000000000!5m2!1snl!2snl"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Tante Marci Food To Go</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 's-Gravelandseweg 563<br>3119 XT Schiedam</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+31101234567">Bel ons</a></p>
+                        <p><i class="fas fa-clock"></i> Ma-Zo: 11:00 - 21:00</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Snelle Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html#menu">Ons Menu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Volg Ons</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tante Marci Food To Go. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

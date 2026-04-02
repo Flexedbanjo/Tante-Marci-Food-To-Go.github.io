@@ -1,12 +1,424 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tante Marci Food To Go</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tante Marci Food To Go - Indonesisch Restaurant Schiedam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-circle">TM</div>
+                <span class="logo-text">Tante Marci</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="restaurant-hero.jpg" alt="Tante Marci Restaurant">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <div class="hero-logo-circle">TM</div>
+            </div>
+            <h1>Tante Marci Food To Go</h1>
+            <p class="hero-subtitle">Authentieke Indonesische smaken in Schiedam</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Bekijk Ons Menu</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Opnemen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="info-cards">
+        <div class="container">
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="info-icon orange">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Locatie</h3>
+                        <p>'s-Gravelandseweg 563<br>3119 XT Schiedam</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon green">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Openingstijden</h3>
+                        <p>Maandag - Zondag<br>11:00 - 21:00</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon blue">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Bestellen</h3>
+                        <p>Bel voor afhalen<br>of kom langs!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-label">
+                        <i class="fas fa-star"></i>
+                        <span>Over Ons</span>
+                    </div>
+                    <h2>Authentieke Indonesische Keuken</h2>
+                    <p>Bij Tante Marci Food To Go brengen we de rijke smaken van Indonesië naar Schiedam. Onze gerechten worden met liefde en passie bereid volgens traditionele recepten.</p>
+                    <p>Van heerlijke broodjes met kip kerrie tot onze huisgemaakte gembersap - elk gerecht vertelt een verhaal van authentieke Indonesische gastvrijheid.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <span>Vers Bereid</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>Authentieke Smaak</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-decoration orange"></div>
+                    <div class="image-decoration red"></div>
+                    <img src="nasi-kip.jpg" alt="Heerlijk Indonesisch eten">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label center">
+                    <i class="fas fa-utensils"></i>
+                    <span>Ons Menu</span>
+                </div>
+                <h2>Ontdek Onze Heerlijke Gerechten</h2>
+                <p>Van smakelijke broodjes tot complete maaltijden - er is voor elk wat wils!</p>
+            </div>
+
+            <!-- Broodjes -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <div class="category-icon orange-gradient">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <h3>Broodjes</h3>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Kip Kerrie</h4>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Kerrie Ei</h4>
+                            <span class="price">€ 3,50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Rode Kip</h4>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Zoete Ketjap Kip</h4>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Grillworst Kip</h4>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Steak Pepersaus</h4>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Porn</h4>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Bakkeljouw</h4>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Baked Salmon</h4>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Dynamite</h4>
+                            <span class="price">€ 5,00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Special Van De Week</h4>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maaltijden -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <div class="category-icon green-gradient">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <h3>Maaltijden</h3>
+                </div>
+                <div class="meals-grid">
+                    <div class="meal-card">
+                        <img src="nasi-kip.jpg" alt="Bami Kip">
+                        <div class="meal-info">
+                            <h4>Bami Kip</h4>
+                            <span class="price">€ 6,50</span>
+                        </div>
+                    </div>
+                    <div class="meal-card">
+                        <img src="nasi-kip.jpg" alt="Nasi Kip">
+                        <div class="meal-info">
+                            <h4>Nasi Kip</h4>
+                            <span class="price">€ 6,50</span>
+                        </div>
+                    </div>
+                    <div class="meal-card">
+                        <img src="nasi-kip.jpg" alt="Kippenbout">
+                        <div class="meal-info">
+                            <h4>Kippenbout</h4>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                    </div>
+                    <div class="meal-card">
+                        <img src="nasi-kip.jpg" alt="Special Van De Dag">
+                        <div class="meal-info">
+                            <h4>Special Van De Dag</h4>
+                            <span class="price">€ 10,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dranken -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <div class="category-icon blue-gradient">
+                        <i class="fas fa-glass-water"></i>
+                    </div>
+                    <h3>Dranken</h3>
+                </div>
+                <div class="drinks-grid">
+                    <div class="drink-item">
+                        <span>Coca Cola</span>
+                        <span class="price">€ 2,25</span>
+                    </div>
+                    <div class="drink-item">
+                        <span>Coca Cola Zero</span>
+                        <span class="price">€ 2,25</span>
+                    </div>
+                    <div class="drink-item">
+                        <span>Fanta</span>
+                        <span class="price">€ 2,25</span>
+                    </div>
+                    <div class="drink-item">
+                        <span>Fanta Zero</span>
+                        <span class="price">€ 2,25</span>
+                    </div>
+                    <div class="drink-item">
+                        <span>Fernandes Rood</span>
+                        <span class="price">€ 2,25</span>
+                    </div>
+                    <div class="drink-item">
+                        <span>Fernandes Groen</span>
+                        <span class="price">€ 2,25</span>
+                    </div>
+                    <div class="drink-item">
+                        <span>Energy Drank</span>
+                        <span class="price">€ 3,00</span>
+                    </div>
+                    <div class="drink-item">
+                        <span>Water</span>
+                        <span class="price">€ 2,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homemade -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <div class="category-icon amber-gradient">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Homemade Specials</h3>
+                </div>
+                <div class="homemade-grid">
+                    <div class="homemade-card">
+                        <img src="gembersap.jpg" alt="Gembersap">
+                        <div class="homemade-info">
+                            <h4>Gembersap 250 Ml</h4>
+                            <span class="price">€ 2,50</span>
+                        </div>
+                    </div>
+                    <div class="homemade-card">
+                        <img src="gembersap.jpg" alt="Gembersap">
+                        <div class="homemade-info">
+                            <h4>Gembersap 500 Ml</h4>
+                            <span class="price">€ 5,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label center">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Locatie</span>
+                </div>
+                <h2>Waar Vind Je Ons?</h2>
+                <p>Kom langs en ervaar de heerlijke smaken van Tante Marci!</p>
+            </div>
+            <div class="location-grid">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2458.5!2d4.38!3d51.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c435c1cae2dc01%3A0x80fef12d324a6b3e!2sTante%20Marci%20Food%20To%20Go!5e0!3m2!1snl!2snl!4v1700000000000!5m2!1snl!2snl"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="location-info">
+                    <h3>Contactgegevens</h3>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-icon orange">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Adres</h4>
+                                <p>'s-Gravelandseweg 563<br>3119 XT Schiedam</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon green">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Openingstijden</h4>
+                                <p>Maandag - Zondag: 11:00 - 21:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon blue">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Telefoon</h4>
+                                <a href="tel:+31101234567">Bel voor bestellingen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary btn-full">
+                        Volledige Contactpagina
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Tante Marci Food To Go</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 's-Gravelandseweg 563<br>3119 XT Schiedam</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+31101234567">Bel ons</a></p>
+                        <p><i class="fas fa-clock"></i> Ma-Zo: 11:00 - 21:00</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Snelle Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#menu">Ons Menu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Volg Ons</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tante Marci Food To Go. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
